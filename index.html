@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Darkroom — drag a negative onto the easel to enlarge it.">
+    <title>Darkroom — Drag &amp; Drop Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="darkroom">
+        <header class="darkroom__head">
+            <p class="eyebrow">Contact sheet — 5 negatives</p>
+            <h1>Drag <span class="amp">into</span> the light</h1>
+            <p class="lede">Pull a frame off the strip, drop it on the easel. Drag only.</p>
+        </header>
+
+        <div class="gallery-container">
+            <div class="small-images" aria-label="Negatives. Drag a frame to the easel to enlarge.">
+                <div class="frame" draggable="true" data-src="images/image1.jpg" data-caption="Frame A — Image 1">
+                    <span class="frame__sprockets" aria-hidden="true"></span>
+                    <img class="small-image" src="images/image1.jpg" draggable="false" alt="Image 1">
+                    <span class="frame__label">A</span>
+                </div>
+                <div class="frame" draggable="true" data-src="images/image2.jpg" data-caption="Frame B — Image 2">
+                    <span class="frame__sprockets" aria-hidden="true"></span>
+                    <img class="small-image" src="images/image2.jpg" draggable="false" alt="Image 2">
+                    <span class="frame__label">B</span>
+                </div>
+                <div class="frame" draggable="true" data-src="images/image3.jpg" data-caption="Frame C — Image 3">
+                    <span class="frame__sprockets" aria-hidden="true"></span>
+                    <img class="small-image" src="images/image3.jpg" draggable="false" alt="Image 3">
+                    <span class="frame__label">C</span>
+                </div>
+                <div class="frame" draggable="true" data-src="images/image4.jpg" data-caption="Frame D — Image 4">
+                    <span class="frame__sprockets" aria-hidden="true"></span>
+                    <img class="small-image" src="images/image4.jpg" draggable="false" alt="Image 4">
+                    <span class="frame__label">D</span>
+                </div>
+                <div class="frame" draggable="true" data-src="images/image5.jpg" data-caption="Frame E — Image 5">
+                    <span class="frame__sprockets" aria-hidden="true"></span>
+                    <img class="small-image" src="images/image5.jpg" draggable="false" alt="Image 5">
+                    <span class="frame__label">E</span>
+                </div>
+            </div>
+
+            <div class="large-image-box" aria-live="polite">
+                <img id="displayImage" src="" alt="Selected image will appear here">
+                <p id="caption" class="caption">No frame yet — drag one over</p>
+                <p class="easel-hint">Drop here</p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
